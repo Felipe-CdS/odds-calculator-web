@@ -1,19 +1,17 @@
-import { swapTest } from '../../Calcs'
+import { calcsContainer } from '../CalcsContainer/index';
 
-export function twitchViewer(){
-    
-    let divEl = document.createElement('div');
-    divEl.id = "twitch-viewer";
-    let pEl = document.createElement('h1');
-    pEl.appendChild(document.createTextNode("Twitch"));
+export function twitchViewer() {
 
-    let buttonTest = document.createElement('button');
-    buttonTest.appendChild(document.createTextNode("test"));
-    buttonTest.onclick = swapTest;
-    
-    divEl.appendChild(pEl);
-    divEl.appendChild(buttonTest);
-    return divEl;
+  let divEl = document.createElement("div");
+  divEl.id = "twitch-viewer";
+
+  let iFrameElement = document.createElement("iframe");
+  iFrameElement.setAttribute("src", "https://www.youtube.com/embed/ZlKoeJ3xlx4");
+
+  let calcsElement = calcsContainer();
+
+  divEl.appendChild(iFrameElement);
+  divEl.appendChild(calcsElement);
+  return divEl;
+
 }
-
-

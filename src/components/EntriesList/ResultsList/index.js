@@ -1,6 +1,6 @@
 import { enterInput, reset, revert } from "../../../Calcs";
 
-export function resultsList(team){
+export function resultsList(team, enemyTeam){
     let container = document.createElement("container");
     container.className = "results-list-container";
 
@@ -35,15 +35,15 @@ export function resultsList(team){
 
     let enterButton = document.createElement('button');
     enterButton.appendChild(document.createTextNode('Enter Input'));
-    enterButton.onclick = enterInput(team);
+    enterButton.onclick = enterInput(team, enemyTeam);
 
     let revertButton = document.createElement('button');
     revertButton.appendChild(document.createTextNode('Revert'));
-    revertButton.onclick = revert(team);
+    revertButton.onclick = revert(team, enemyTeam);
 
     let resetButton = document.createElement('button');
     resetButton.appendChild(document.createTextNode('Reset'));
-    resetButton.onclick = reset(team);
+    resetButton.onclick = reset(team, enemyTeam);
 
     divElement.appendChild(enterButton);
     divElement.appendChild(revertButton);

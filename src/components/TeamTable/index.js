@@ -2,7 +2,7 @@ import { oddsList } from '../EntriesList/OddsList/index';
 import { valuesList } from '../EntriesList/ValuesList/index';
 import { resultsList } from '../EntriesList/ResultsList/index';
 
-export function teamTable(team){
+export function teamTable(team, enemyTeam){
     let container = document.createElement('container');
     container.id = "team-table";
 
@@ -12,7 +12,7 @@ export function teamTable(team){
     let divElement = document.createElement('div');
     divElement.appendChild(oddsList(team.odds));
     divElement.appendChild(valuesList(team.values));
-    divElement.appendChild(resultsList(team));
+    divElement.appendChild(resultsList(team, enemyTeam));
 
 
     container.appendChild(h2Element);
