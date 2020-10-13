@@ -304,7 +304,7 @@ function equalValueCalc(teamOne, teamTwo) {
         teamTag = document.createElement("span");
         teamTag.appendChild(document.createTextNode(teamOne.name));
         spanElement1 = document.createElement("span");
-        spanElement1.appendChild(document.createTextNode("Value: R$ " + teamTwoFinalResult));
+        spanElement1.appendChild(document.createTextNode("Value: R$ " + teamTwoFinalResult.toFixed(2)));
         spanElement2 = document.createElement("span");
         spanElement2.appendChild(document.createTextNode("odd: " + result));
     }
@@ -317,7 +317,7 @@ function equalValueCalc(teamOne, teamTwo) {
         teamTag = document.createElement("span");
         teamTag.appendChild(document.createTextNode(teamTwo.name));
         spanElement1 = document.createElement("span");
-        spanElement1.appendChild(document.createTextNode("Value: R$ " + teamOneFinalResult));
+        spanElement1.appendChild(document.createTextNode("Value: R$ " + teamOneFinalResult.toFixed(2)));
         spanElement2 = document.createElement("span");
         spanElement2.appendChild(document.createTextNode("odd: " + result));
     }
